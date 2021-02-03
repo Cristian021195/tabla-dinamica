@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', (dom)=>{
             }
 
 
-            renderizar('/html/'+ruta);
+            renderizar('https://cristian021195.github.io/tabla-dinamica/html/'+ruta);
             //$result.innerHTML 
         })
     })
