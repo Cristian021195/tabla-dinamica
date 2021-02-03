@@ -1,0 +1,5 @@
+/*DIMENSIONES GENERALES*/
+.v-scroll{
+    height: 55vh;
+    overflow-y: scroll;
+}

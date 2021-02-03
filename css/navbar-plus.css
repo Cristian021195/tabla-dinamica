@@ -1,0 +1,106 @@
+/*COLORES*/
+*{
+    --scroll-thumb: rgba(0, 0, 0, 0.40);
+    --scroll-primary:#0d6efd;
+    --scroll-secondary: #6c757d;
+    --scroll-success:#198754;
+    --scroll-pagado:#00b81f;
+    --scroll-danger:#dc3545;
+    --scroll-warning:#ffc107;
+    --scroll-info:#0dcaf0;
+    --scroll-light:#f8f9fa;
+    --scroll-dark:#343a40;
+    --scroll-white:#fff;
+}
+body{
+    overflow-x: hidden;
+    background-color: whitesmoke;
+    /*background-image: linear-gradient(to right, rgb(255, 255, 255) , rgb(143, 143, 143), rgb(255, 255, 255));*/
+}
+/*NAVBAR PLUS*/
+.side-ul{
+    position: absolute;
+    list-style: none;
+    width: 14em;
+    padding: 1em 1em 0em 1em;
+}
+.side-ul-hide{
+    position: absolute;
+    list-style: none;
+    width: 14em;
+    padding: 1em 1em 0em 1em;
+}
+.side-ul-pic{
+    border-radius: .4em;
+}
+.sombreado{
+    width: 95%;
+    margin: auto;
+    box-shadow: 0em 0em 1em rgb(151, 151, 151);
+}
+td{
+    white-space: nowrap;
+}
+/*ANIMACIONES*/
+@keyframes sideNavToggle {
+    from{
+        transform: translateX(-100%);
+    }to{
+        transform: translateX(0%);
+    }
+}
+@keyframes sideNavToggleHide {
+    from{
+        transform: translateX(0%);
+    }to{
+        transform: translateX(-100%);
+    }
+}
+@keyframes navegar{
+    from{
+        background-color: transparent;
+        border-radius: 100%;
+    }
+    to{
+        background-color: #ffffff73;
+        border-radius: .3em;
+    }
+}
+@keyframes slide{
+    0%{
+      transform: translateX(0%);
+      opacity: 1;
+    }
+    33%{
+      transform: translateX(25%);
+      opacity: 0;
+    }
+    66%{
+      transform: translateX(-25%);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0%);
+      opacity: 1;
+    }
+}
+.slideOut{
+    animation: slide;
+    animation-duration: .5s;
+}
+.overflow{
+    scrollbar-width: thin;
+}
+.overflow::-webkit-scrollbar{
+    width: 12px;
+}
+.overflow::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: var(--scroll-thumb);
+}
+@media screen and (max-width: 1000px){
+    .nav-item:hover{
+        animation: navegar;
+        animation-duration: .25s;
+    }
+}
